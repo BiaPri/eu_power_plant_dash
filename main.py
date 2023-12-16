@@ -5,6 +5,7 @@ from dash.dependencies import Input, Output
 
 # Initialize the app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
+server = app.server
 
 def load_html_content(file_path):
     with open(file_path, 'r') as file:
