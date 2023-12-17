@@ -25,6 +25,8 @@ This dashboard is designed to facilitate a comparative analysis of two open-acce
 This dashboard allows you to interactively filter power plants on the map by clicking the corresponding circles in the legend.\n
 Please note that the map interface may have some responsiveness limitations. For optimal viewing and analysis, we recommend using this feature to visualize the data.
 
+The second filter provides an intuitive navigation option, allowing you to switch between viewing the total number of installations and the cumulative power capacity for each source type.
+
 **Important Reminder:**
 - **Dataset 1**: Represents data as of 2018, providing a snapshot of the situation in that year.
 - **Dataset 2**: Is regularly updated, offering the most current information available.
