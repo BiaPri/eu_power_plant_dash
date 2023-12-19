@@ -5,17 +5,34 @@ def load_html_content(file_path):
     with open(file_path, 'r') as file:
         return file.read()
 
-sources = {'eu': 'https://visitors-centre.jrc.ec.europa.eu/en/media/tools/how-power-generated-europe-check-out-our-power-plant-database',
-           'pypsa': 'https://github.com/PyPSA/powerplantmatching/tree/master'}
 
 # Set page configuration and title
 st.set_page_config(layout="wide")
+
+st.title("⚡Datacenters Total Power Consumption")
+st.subheader("Energy Radar #4")
+
+st.markdown("""
+This maps depicts the number of datacenters per country. 
+
+This data is issued from the website [DataCente](https://datacente.rs/) developed by some dedicated individuals.
+
+The creators were able to identify only about 15% of datacenters' power consumption, amounting to approximately 19 GW.\n 
+Extrapolating from this, assuming the unaccounted datacenters share similar characteristics, we arrive at an astonishing estimated total of 127 GW. This figure is roughly double the power capacity of France's nuclear plants, which is around 61 GW.
+""")
+
+# Displaying the main content
+central_html_file = f'assets/datacenters.html'
+central_html_content = load_html_content(central_html_file)
+st.components.v1.html(central_html_content, width=1000, height=550, scrolling=False)
 
 # Custom CSS to inject into the Streamlit app
 
 st.title("⚡Europe Power Plant Datasets: EU vs PyPSA")
 st.subheader("Energy Radar #3")
 
+sources = {'eu': 'https://visitors-centre.jrc.ec.europa.eu/en/media/tools/how-power-generated-europe-check-out-our-power-plant-database',
+           'pypsa': 'https://github.com/PyPSA/powerplantmatching/tree/master'}
 
 st.markdown("""
 This dashboard is designed to facilitate a comparative analysis of two open-access datasets, which offer insights into Europe's power plants:
