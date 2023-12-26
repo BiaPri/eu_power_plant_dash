@@ -4,10 +4,40 @@ import streamlit as st
 def load_html_content(file_path):
     with open(file_path, 'r') as file:
         return file.read()
-
-
+    
 # Set page configuration and title
 st.set_page_config(layout="wide")
+
+st.title("⚡A Decade of Progress: Switzerland Solar Energy")
+st.subheader("Energy Radar #5")
+
+st.markdown("""
+In the following plots, we're taking a closer look at Switzerland solar energy deployment. The focus is to highlight the advancements made in each canton.
+
+Here are some key highlights from the study:
+-	Switzerland's overall current progression stands at 6.37%.
+-	The canton with the highest progression is at 10.71%.
+-	The top three performing cantons are Appenzell Innerrhoden, Luzern, and Thurgau.
+-	The canton with lowest progression is at 4.3%
+
+This map will be updated each year, to track this progression.
+
+""")
+
+col1, spacer, col2 = st.columns([3, 0.5, 2.5])
+
+# First selectbox in the first column
+with col1:
+    cantons = f'assets/cantons_progress.html'
+    cantons = load_html_content(cantons)
+    st.components.v1.html(cantons, width=800, height=550, scrolling=False)
+
+# Second selectbox in the second column
+with col2:
+    cantons = f'assets/switzerland_solar_energy_progress.html'
+    cantons = load_html_content(cantons)
+    st.components.v1.html(cantons, width=800, height=535, scrolling=True)
+
 
 st.title("⚡Datacenters Total Power Consumption")
 st.subheader("Energy Radar #4")
