@@ -14,6 +14,8 @@ st.subheader("Energy Radar #5")
 st.markdown("""
 In the following plots, we're taking a closer look at Switzerland solar energy deployment. The focus is to highlight the advancements made in each canton.
 
+The bar chart on the right illustrates each canton's advancement in solar energy utilization, ranging from 0% to 100%. It also highlights the set objectives for each canton, providing a clear benchmark for their solar energy goals.
+
 Here are some key highlights from the study:
 -	Switzerland's overall current progression stands at 6.37%.
 -	The canton with the highest progression is at 10.71%.
